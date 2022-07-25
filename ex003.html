@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de dados</title>
+    <style>
+        body {
+            background-color: rgba(137, 43, 226, 0.459);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulação e tratamento de dados com JavaScript</h1>
+    <h2>Formatando números:</h2>
+    <p>Na aula passada criamos alguns prompt que apareceu em janela ao abrir o navegador, mas ao inserir os dados não acontecia nada, nessa aula aprenderemos a manipular esses dados.</p>
+    <p>O window.prompt retorna uma string, mesmo que você digite um número, é uma carecterística do comando. E ao usar o símbolo + ele pode te retornar dois valores, dependendo do tipo do dado. No caso de string, ele concatena (exemplo na aula anterior, onde concatenamos a frase + nome), e em caso de números, ele faz a adição.</p>
+    <p>Mas como faríamos uma soma dos números nessa página? Nesse caso, faremos uma conversão de string para número, desse jeito o símbolo + vai ser para adição.</p>
+    <p>Como a conversão de string para número é feita? Existem algumas maneiras de realizar essa conversão. A primeira delas é usar o comando Number.parseInt(n) - para números inteiros, e Number.parseFloat(n) para números reais.</p>
+    <p>A variavel anteriormente estava da seguinte maneira:</p>
+    <p>var n1 = window.prompt('Digite um número: ')</p> 
+    <p>var n2 = window.prompt('Digite outro número: ') </p>
+    <p>E após adicionar o Number.parseInt(n) ficou assim:</p>
+    <p>var n1 = Number.parseInt(window.prompt('Digite um número: '))</p>
+    <p>var n2 = Number.parseInt(window.prompt('Digite outro número: '))</p>
+    <br>
+    <p>A limitação de usar o Number.parseInt(n) é que ele não recebe números reais, ou seja, se você utilizar por exemplo 7.5 + 5 ele vai retornar 12 e não 12.5. Para isso podemos utilizar o Number.parseFloat(n). Porém existe outra maneira de realizar essa adição utilizando somente o Number(n) (mas atenção, ele não descarta as outras maneiras realizar).</p>
+    <p>Utilizando somente o Number(n) ficará: Number(window.prompt('Digite um número: '))</p>
+    <p>Outra maneira de manipular um número:</p>
+    <p>Declaramos a seguinte variável: var n1 = 1543.5</p>
+    <p>Podemos usar a sintaxe n1.toFixed(2) para transformar o número para 1543.50</p>
+    <p>E caso queira trocar o . para , podemos usar n1.toFixed(2).replace('.', ',')</p>
+    <hr>
+    <h2>E para formatar Strings?</h2>
+    <p>Para usar a conversão de número para string, existem duas maneiras:</p>
+    <p>String(n)</p>
+    <p>n.toString()</p>
+    <p>Declaramos a seguitne variável: var s = 'JavaScript'</p>
+    <p>'Eu estou aprendendo s' // não faz interpolação</p>
+    <p>'Eu estou aprendendo' + s // usa concatenação</p>
+    <p>`Eu estou aprendendo ${s}` // usa template string</p>
+    <p>s.lenght // quantos caracteres a string tem</p>
+    <p>s.toUpperCase() // tudo para MAIÚSCULAS</p>
+    <p></p>s.toLowerCase() // tudo para minúsculas</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é ${s}`)
+    </script>
+</body>
+</html>
