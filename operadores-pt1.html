@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores (parte 1)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        strong {
+            background-color: burlywood;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores parte 1</h1>
+    <p>O JS possui várias famílias de operadores, mas nas aulas iremos focar nos operadores aritméticos, operadores de atribuição, relacionais, lógicos e ternário.</p>
+    <p>Nessa aula, iremos focar no aritméticos e operadores de atribuição.</p>
+    <h2>Operadores Aritméticos:</h2>
+    <p>São operadores que são usados para fazer cálculos:</p>
+    <ul>
+        <li>+ = soma</li>
+        <li>- = diminuição</li>
+        <li>* = multiplicação</li>
+        <li>/ = divisão (números reais)</li>
+        <li>% = divisão (números inteiros/resto da divisão)</li>
+        <li>** = potência (n ao quadrado)</li>
+    </ul>
+    <h2>Ordem de precedência:</h2>
+    <p>Em todas as linguagens de programação, os operadores tem ordem de precedência, seguindo sempre essa ordem:</p>
+    <ul>
+        <li>( ) o operador vai ler primemramente o que está dentro dos parenteses</li>
+        <li>** após isso, ele vai ler o operador de potência</li>
+        <li>* / % logo após ele vai ler os operadores de multiplicação, divisão e resto da divisão, lembrando que sempre ele irá ler da esquerda para a direita.</li>
+        <li>+ - e por final, ele vai ler os operadores de soma e diminuição, também seguindo a regra de ler da esquerda para a direita.</li>
+    </ul>
+    <h2>Atribuição simples:</h2>
+    <p>Podemos guardar os resultados dessas somas em algumas variáveis e fazer mais variáveis em sequência, exemplo:</p>
+    <ul>
+        <li>var a = 5 + 3 ou seja, var a = 8</li>
+        <li>var b = a % 5 ou seja, var b = 3</li>
+        <li>var c = 5 * <strong>b ** a</strong> ou seja, var c = 45</li>
+        <li>var d = 10 - <strong>a / 2</strong> ou seja, var d = 6</li>
+        <li>var e = <strong>6 * 2</strong> / d ou seja, var e = 2</li>
+        <li>var f = <strong>b % e</strong> + <strong>4 / e</strong>, ou seja var f = 3</li>
+    </ul>
+    <p>Lembrando que o JS sempre irá seguir a ordem de precedência na hora de fazer os cálculos, como está em destaque acima.</p>
+    <h2>Auto-atribuições e suas simplificações:</h2>
+    <p>Auto-atribuições são atribuições à própria variável, como o exemplo a seguir:</p>
+    <ol>
+        <li>var n = 3</li>
+        <li>n = n + 4, ou seja, n = 7</li>
+        <li>n = n - 5, ou seja, n = 2</li>
+        <li>n = n * 4, ou seja n = 8</li>
+        <li>n = n / 2, ou seja n = 4</li>
+        <li>n = n ** 2, ou seja n = 16</li>
+        <li>n = n % 5, ou seja n = 1</li>
+    </ol>
+    <p>Simplificando as auto-atribuições:</p>
+    <ul>
+        <li>n = n + 4, simplificando n += 4</li>
+        <li>n = n - 5, simplificando n -= 5</li>
+        <li>n = n * 4, simplificando n *= 4</li>
+        <li>n = n / 2, simplificando n /= 2</li>
+        <li>n = n ** 2, simplificando n **= 2</li>
+        <li>n = n % 5, simplificando n %= 5</li>
+    </ul>
+    <p>Obs.: a grande maioria das linguagens de programação aceitam as variações acima.</p>
+
+    <h2>Operador de incremento:</h2>
+    <p>Esse oprador é muito usado para simplificar auto-atribuições ainda mais, seguindo a sintaxe:</p>
+    <p>Digamos que <strong>var x = 5</strong>, simplificando a auto atribuição anteriormente x = x + 1 ou x += 1, podemos usar a seguitne sintaxe <strong>x++</strong> ou <strong>++x</strong></p>
+
+
+</body>
+</html>
