@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores (parte 2)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        strong {
+            background-color: burlywood;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Nessa aula falaremos sobre operadores relacionais, lógicos e ternário.</h1>
+    <h2>Operadores relacionais</h2>
+    <p>Os operadores relacionais são os mesmos da maioria das linguagens de programação, sao eles:</p>
+    <ul>
+        <li>5 <strong>&gt;</strong> 2 // 5 é <strong>maior</strong> que 2 resultando em (TRUE)</li>
+        <li>7 <strong>&lt;</strong> 4 // 7 não é <strong>menor</strong> que 4, resultando em (FALSE)</li>
+        <li>8 <strong>&gt;=</strong> 8 // 8 é <strong>maior ou igual</strong> a 8, resultando em (TRUE)</li>
+        <li>9 <strong>&lt;=</strong> 7 // 9 não é <strong>menor ou igual</strong> a 7, resultando em (FALSE)</li>
+        <li>5 <strong>==</strong> 5 // 5 é <strong>igual</strong> a 5, resultando em (TRUE)</li>
+        <li>4 <strong>!=</strong> 4 // 4 não é <strong>diferente</strong> de 4, resultando em (FALSE)</li>
+    </ul>
+    <h2>Exemplos:</h2>
+    <p>preço &gt;= 200.50 // o preço é maior ou igual a 200.50?</p>
+    <p>idade &lt; 18 // a idade é menor do que 18?</p>
+    <p>curso == 'JavaScript' // o curso é JavaScript?</p>
+    <p>n1 != n2 // o primeiro número é diferente do segundo?</p>
+    <h2>Operadores relacionais de identidade:</h2>
+    <p>Operadores relacionais de identidade são para conferir se os valores são de mesmo tipo.</p>
+    <ul>
+        <li><strong>5 == 5</strong> -&gt; TRUE // valor 5 do tipo number e valor 5 do tipo number, são <strong>iguais</strong>.</li>
+        <li><strong>5 == '5'</strong> -&gt; TRUE // valor 5 do tipo number e valor 5 do tipo string, são <strong>iguais</strong>.</li>
+        <li><strong>5 === '5</strong>' -&gt; FALSE // valor 5 do tipo number e valor 5 do tipo string, não são <strong>identicos</strong> </li>
+        <li><strong>5 === 5</strong> -&gt; TRUE // valor 5 do tipo number e valor 5 do tipo number, são <strong>identicos</strong></li>
+    </ul>
+    <h2>Operadores lógicos</h2>
+    <p>Os operadores lógicos no JavaScript são 3:</p>
+    <ul>
+        <li>! negação</li>
+        <li>&& conjunção</li>
+        <li>|| disjunção</li>
+    </ul>
+    <p>Operador de negação ! -&gt; ele é tratado como um operador unário, que só tem um operando, depois da exclamação ou é verdadeiro ou é falso.</p>
+    <hr>
+    <p>Operador de conjunção && -&gt; ele é tratado como um operador binário, que tem dois valores lógicos, um de cada lado. O resultado desse operador vai ser verdadeiro somente se os dois valores forem verdadeiros:</p>
+    <ul>
+        <li>true && true -&gt; true </li>
+        <li>true && false -&gt; false</li>
+        <li>false && true -&gt; false</li>
+        <li>false && false -&gt; false</li>
+    </ul>
+    <hr>
+    <p>Operador de disjunção || -&gt; também é um operador binário de dois valores lógicos, e basta que um deles seja verdadeiro, para o resultado ser verdadeiro:</p>
+    <ul>
+        <li>true || true -&gt; true</li>
+        <li>true || false -&gt; true</li>
+        <li>false || true -&gt; true</li>
+        <li>false || false -&gt; false</li>
+    </ul>
+    <p><strong>OBS.: quando temos operadores aritméticos, relacionais e lógicos na mesma expressão, a ordem que é realizada a consulta é a seguinte: aritméticos -&gt; relacionais -&gt; lógicos. Quando a expressão tiver um &&, um || e um ! a ordem de execução é SEMPRE essa -&gt; ! depois && depois ||</strong></p>
+    <p>Exemplos:</p>
+    <ul>
+        <li>idade &gt;= 15 && idade &lt;= 17 // a idade está entre 15 e 17?</li>
+        <li>estado == 'RJ' || estado == 'SP' // o estado é RJ ou SP?</li>
+        <li>salário &gt; 1500 && sexo != 'M' // o salário é acima de 1500 e não é homem?</li>
+    </ul>
+    <h2>Ordem de precedência:</h2>
+    <ol>
+        <li>Operadores aritméticos: ( ) ** / ...</li>
+        <li>Operadores relacionais: &gt; &lt; &gt;= ...</li>
+        <li>Operadores lógicos: ! && ||</li>
+    </ol>
+    <hr>
+    <h2>Operador ternário</h2>
+    <p>O operador ternário é composto por dois símbolos que aparecem na mesma expressão, a ? e :, e ele se chama ternário pois tem três partes, sendo a sintaxe:</p>
+    <p>teste <strong>?</strong> true <strong>:</strong> false</p>
+    <p>Lê-se: teste lógico <strong>?</strong> o que acontece quando o teste é verdadeiro <strong>:</strong> o que acontece quando o teste é falso</p>
+    <p>Exemplo:</p>
+    <p>média &gt;= 7.0 ? "Aprovado" : "Reprovado"</p>
+    <p>Se a média for maior ou igual a 7, ele será aprovado, se a média for menor que 7, ele será reprovado.</p>
+</body>
+</html>
