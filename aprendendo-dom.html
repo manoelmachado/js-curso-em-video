@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo DOM</h1>
+    <p>Iremos testar nos exercícios <a href="ex005.html">005</a> e 006.</p>
+    <p>DOM é um acronimo para Document Object Model. É um conjunto de objetos dentro do seu navegador que dá acesso aos componentes internos do website. O DOM funciona quando estou rodando JavaScript dentro do meu navegador. Uma coisa importante para saber é a <strong>Árvore DOM</strong></p>
+    <p>A árvore DOM começa pela raiz, e a raiz é chamada de window. Tudo dentro do JavaScript está dentro do window, dentro do window temos vários outros objetos, alguns exemplos são o objeto <strong>location</strong> (que diz a localização do seu site, URL, página atual, página anterior...), o <strong>document</strong> (o documento atual), <strong>history</strong> (guarde de onde  você veio, para onde você vai...) etc...</p>
+    <p>Dentro de document, temos outro objeto chamado <strong>HTML</strong>, que é exatamente a parte <strong>HTML</strong> do nosso site. E dentro do <strong>HTML</strong>, temos dois objetos <strong>head</strong> e <strong>body</strong>.</p>
+    <p>O objeto <strong>head</strong> e <strong>body</strong> é filho (ou child) de <strong>HTML</strong>, e o <strong>HTML</strong> é pai, ou parent de <strong>head</strong> e <strong>body</strong>. Basicamente quem está abaixo é child e quem está acima é parent.</p>
+    <p>Veja no exemplo a seguir:</p>
+    <img src="arvore-dom.png" alt="">
+    <p>Existem várias maneiras de navegar entre os objetos com DOM (todo e qualquer elemento que apareça na árvore DOM). Mas como selecionamos?</p>
+    <p>Existem várias maneiras de selecionar os objetos, o que aprenderemos nessa aula serão os métodos de selecionar por: marca, D, nome, classe e seletor.</p>
+    <h2>Selecionando por marca (ou por TagName)</h2>
+    <p>Sintaxe: <strong>getElementsByTagName()</strong></p>
+    <p>Você consegue selecionar mais de um objeto com o <strong>getElementsByTagName()</strong>, pois existem vários objetos com a mesma tag. Para selecionar a tag que você queira, basta adicionar [n] no final, e dentro o número da tag que você quer modificar, por exemplo: <strong>getElementsByTagName()[1]</strong></p>
+    <h2>Selecionando por ID</h2>
+    <p>Sintaxe: getElementById()</p>
+    <p>Selecionar elementos por ID é muito útil quando seu website é muito grande e tem diversas tags mas você precisa de selecionar só uma, por exemplo.</p>
+    <h2>Selecionando por nome</h2>
+    <p>Sintaxe: getElementsByName()</p>
+    <h2>Selecionando por classe</h2>
+    <p>Sintaxe: getElementsByClassName()</p>
+    <h2>Selecionando por seletor</h2>
+    <p>Essa forma é recomendavel pela maioria dos manuais e utilizamos a sintaxe: querySelector() ou querySelectorAll() quando formos selecionar vários objetos.</p>
+    <p>Ao selecionar por querySelector, utilizamos sempre a sintaxe do CSS, sendo ID = # e class = . ou seja: querySelector(div#msg) para id="msg" e querySelector(div.msg) para class="msg"</p>
+</body>
+</html>
