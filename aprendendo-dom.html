@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>Aprendendo DOM</h1>
-    <p>Iremos testar nos exercícios <a href="ex005.html">005</a> e 006.</p>
+    <p>Iremos testar nos exercícios <a href="ex005.html">005</a>, <a href="ex006.html">006</a> e <a href="ex007.html">007</a>.</p>
     <p>DOM é um acronimo para Document Object Model. É um conjunto de objetos dentro do seu navegador que dá acesso aos componentes internos do website. O DOM funciona quando estou rodando JavaScript dentro do meu navegador. Uma coisa importante para saber é a <strong>Árvore DOM</strong></p>
     <p>A árvore DOM começa pela raiz, e a raiz é chamada de window. Tudo dentro do JavaScript está dentro do window, dentro do window temos vários outros objetos, alguns exemplos são o objeto <strong>location</strong> (que diz a localização do seu site, URL, página atual, página anterior...), o <strong>document</strong> (o documento atual), <strong>history</strong> (guarde de onde  você veio, para onde você vai...) etc...</p>
     <p>Dentro de document, temos outro objeto chamado <strong>HTML</strong>, que é exatamente a parte <strong>HTML</strong> do nosso site. E dentro do <strong>HTML</strong>, temos dois objetos <strong>head</strong> e <strong>body</strong>.</p>
@@ -35,5 +35,18 @@
     <h2>Selecionando por seletor</h2>
     <p>Essa forma é recomendavel pela maioria dos manuais e utilizamos a sintaxe: querySelector() ou querySelectorAll() quando formos selecionar vários objetos.</p>
     <p>Ao selecionar por querySelector, utilizamos sempre a sintaxe do CSS, sendo ID = # e class = . ou seja: querySelector(div#msg) para id="msg" e querySelector(div.msg) para class="msg"</p>
+    <hr>
+    <h2>Eventos DOM</h2>
+    <p>Evento é TUDO aquilo que possa acontecer com QUALQUER elemento, no nosso exemplo dessa aula, uma &lt;div&gt;. Mas o que pode acontecer com essa div? Um monte de coisas, mas o mais comum são eventos de mouse. Eu posso por exemplo passar o mouse por cima da div, disparando o evento <strong>mouseenter</strong>, movendo o mouse dentro da div vai ser disparado o evento <strong>mousemove</strong>, se eu clicar e segurar o mouse o evento disparado é o <strong>mousedown</strong>, quando solto o clique o evento é <strong>mouseup</strong>, caso eu apenas clique rapidamente o evento é chamado de <strong>click</strong>, e da mesma maneira que teve o mouseenter para entrar na div, tem o evento <strong>mouseout</strong> que dispara quando sai da div.</p>
+    <p>Esses são apenas POUCOS eventos DOM, procurando no <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">Event reference</a> você vai ver vários outros eventos.</p>
+    <p>Mas para disparar eventos, precisamos primeiro saber sobre funções:</p>
+    <p>Função é um conjunto de códigos que vão ser executadas somente quando o evento ocorrer. Imagine que estou programando 10 linhas (um bloco). Essas 10 linhas não vão ser executadas imediatamente, essas linhas só serão executadas quando eu clicar dentro da div. Para executar essas 10 linhas somente quando o evento ocorrer, o primeiro passo é colocar ela dentro de um bloco que é delimitado entre os sinais de chaves. Esse bloco, você precisa nomea-lo com uma function ação(), esse sendo o nome do evento que você quer que aconteça e opcionalmente você pode adicinoar dentro desses parenteses alguns parametros. Exemplo:</p>
+    <img src="function-dom.png" alt="">
+    <hr>
+    <p>A seguir vamos mostrar um dos exemplos que citamos acima com os eventos de mouse:</p>
+    <img src="click1.png" alt="">
+    <p>Os eventos foram feitos no HTML, porém eles também podem ser feitos somente no JavaScript, que ficaria assim:</p>
+    <img src="click2.png" alt="">
+    <p>Dessa maneira, nosso HTML fica mais limpo e deixamos a parte de funções e interações somente no JavaScript</p>
 </body>
 </html>
