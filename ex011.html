@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input {
+            padding: 3px;
+            margin: 2px;
+        }
+        div {
+            margin: 6px;
+            padding: 10px;
+            background-color: aliceblue;
+            width: 400px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fronteira</h1>
+    Nome: <input type="text" name="nome" id="nome"> <br>
+    Idade: <input type="number" name="idade" id="idade"> <br>
+    País: <input type="text" name="nacio" id="nacio"> <br>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <input type="button" value="Resetar" onclick="resetar()">
+    <div id="res">
+        Resultado...
+    </div>
+    <script>
+        function verificar() {
+            var nome = window.document.getElementById('nome').value
+            var idade = window.document.getElementById('idade').value
+            var pais = window.document.getElementById('nacio').value
+            pais = pais.toUpperCase()
+            var res = window.document.getElementById('res')
+            res.innerHTML =`<p>Bem-Vindo ${nome}!</p>`
+            if (idade >= 18 && pais == 'BRASIL'){
+                res.style.color = 'green'
+                res.innerHTML += `<p>SUA PASSAGEM FOI LIBERADA!</p>`
+            } else {
+                res.style.color = 'red'
+                res.innerHTML += `<p>UN FORASTERO! SUA PASSAGEM FOI BARRADA!</p>`
+            }
+        }
+        function resetar() {
+            var reset1 = document.getElementById('nome')
+            var reset2 = document.getElementById('idade')
+            var reset3 = document.getElementById('nacio')
+            var reset4 = document.getElementById('res')
+            reset1.value = "";
+            reset2.value = "";
+            reset3.value = "";
+            reset4.value = "";
+            reset4.innerHTML = 'Resultado...';
+            reset4.style.color = 'black';
+        }      
+       
+    </script>
+    
+</body>
+</html>
