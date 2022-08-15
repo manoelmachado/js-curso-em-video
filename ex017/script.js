@@ -13,10 +13,5 @@ function calcular () {
             r.appendChild(item)
             c++
         }
-
-
     }
-    
-
-
 }
