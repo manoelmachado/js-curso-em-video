@@ -34,7 +34,7 @@ let v = function(x) {
 console.log(v(5)) 
 
 /* vamos calcular o fatorial de um número, o fatorial do número é ele multiplicando até 1, diminuindo o valor de 1 em 1, por exemplo:
-5" = 5 x 4 x 3 x 3 x 1
+5! = 5 x 4 x 3 x 3 x 1
 */
 
 function fatorial(n) {
