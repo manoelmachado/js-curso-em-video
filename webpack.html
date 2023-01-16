@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpack / Package Managers</title>
+</head>
+<body>
+    <h1>Webpack / Package Managers</h1>
+    <h2>NPM e Node.js</h2>
+    <p>NPM é um acrônimo da palavra Node Package Manager, ou seja, um gerenciador de pacotes do Node.</p>
+    <p>O NPM já vem pre-instalado com o NodeJS, ele permite baixar pacotes e dependências de nossa aplicação na nuvem e também podemos navegar no diretório no endereço <a href="https://www.npmjs.com/" target="_blank">npmjs.com</a></p>
+    <hr>
+    <h2>O que o NPM contém?</h2>
+    <dl>
+        <dt>Gerenciamento de pacotes:</dt>
+            <dd>Controlamos as dependências dos nossos itens, podemos conectar pacotes e criar árvores de dependências.</dd>
+        <dt>Registro de pacotes:</dt>
+            <dd>Podemos registrar nossos pacotes como públicos ou privados.</dd>
+        <dt>NPM CLI</dt>
+            <dd>CLI significa Command Line Interface, ou seja, é uma ferramenta que disponibiliza uma interface de linha de comando para que você possa executar alguns comandos específicos no terminal.</dd>
+            <hr>
+    </dl>
+    <h2>NPM CLI</h2>
+    <p>A estrutura básica do NPM CLI será: <strong>npm &lt;comando&gt; [argumentos]</strong></comando></p>
+    <p>Para mais informações: <a href="https://docs.npmjs.com/cli-documentation/" target="_blank">documentação CLI.</a></p>
+    <p>Inicializando um projeto node:</p>
+    <p>Sempre que iniciarmos um projeto devemos passar o comando <strong>npm init</strong>, esse npm init nos dará uma série de passos para que possamos informar e criar o arquivo package.json que será o mapa da nossa aplicação contendo informações básicas como executar o nosso projeto e suas dependências.</p>
+    <p>O que é definido inicialmente com o npm init?</p>
+    <ul>
+        <li>*Nome do pacote</li>
+        <li>*Versão</li>
+        <li>Descrição</li>
+        <li>Repositório</li>
+        <li>Autor</li>
+        <li>Licença</li>
+        <li>Entre outros...</li>
+    </ul>
+    <p>*esses dois itens são cruciais para identificar seu projeto.</p>
+    <hr>
+    <h2>Dependências:</h2>
+    <p>Elas podem ser de produção ou de desenvolvimento:</p>
+    <p>Produção: por exemplo, pode ser um item que vai fazer um fallback para o seu JavaScript para ter funções para navegadores antigos.</p>
+    <p>Desenvolvimento: vão ser dependências necessárias para executar o desenvolvimento da sua aplicação como por exemplo ferramentas de testes.</p>
+    <p>Elas são separadas em dois objetos: "dependencies" e "devDependencies"; e esses itens serão armazenados por nome e versão.</p>
+    <hr>
+    <h2>Aula prática:</h2>
+    <p>Ao abrir o terminal, verificamos se temos o npm instalado cmo o comando <strong>npm -v</strong></p>
+    <img src="npmv1.png" alt="">
+    <p>Utiliznado o comando <strong>npm -help</strong>, ele nos retornará uma lista com diversos comandos para ajuda. Se eu quiser ter um help de algum comando em específico, por exemplo o comando install, eu poderia utilizar <strong>npm install -h</strong> e ele mostraria uma lista completa de comandos de ajuda para instalação.</p>
+    <img src="npmhelp1.png" alt="">
+    <hr>
+    <p>Criando nosso novo projeto, começamos com o comando já dito anteriormente <strong>npm init</strong></p>
+    <img src="npm-init.png" alt="">
+    <p>Após digitar o comando, preenchemos a lista com as informações necessárias, como  citadas acima, que nos retornará uma preview do arquivo <strong>package.json</strong>:</p>
+    <img src="package-json1.png" alt="">
+    <p>Caso esteja tudo correto, apenas digitamos <strong>yes</strong> e ele criará para nós o arquivo package.json com o mapa da nossa aplicação</p>
+    <img src="package-json2.png" alt="">
+    <p>Agora digamos que queremos nesse projeto incluir webpack, então podemos fazer a instalação do webpack> <strong>npm install webpack</strong>. Ele irá baixar todas as dependências e no final da instalação nos dará algumas informações como a criação do arquivp <strong>package-lock.json</strong>.</p>
+
+</body>
+</html>

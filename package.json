@@ -1,0 +1,23 @@
+{
+  "name": "projeto-curso",
+  "version": "1.0.0",
+  "description": "projeto de teste",
+  "main": "webpack.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manoelmachado/curso-js.git"
+  },
+  "keywords": [
+    "teste",
+    "webpack"
+  ],
+  "author": "manoel machado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manoelmachado/curso-js/issues"
+  },
+  "homepage": "https://github.com/manoelmachado/curso-js#readme"
+}
