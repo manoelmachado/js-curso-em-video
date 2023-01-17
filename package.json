@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/manoelmachado/curso-js/issues"
   },
-  "homepage": "https://github.com/manoelmachado/curso-js#readme"
+  "homepage": "https://github.com/manoelmachado/curso-js#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.75.0"
+  }
 }

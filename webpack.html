@@ -57,7 +57,23 @@
     <img src="package-json1.png" alt="">
     <p>Caso esteja tudo correto, apenas digitamos <strong>yes</strong> e ele criará para nós o arquivo package.json com o mapa da nossa aplicação</p>
     <img src="package-json2.png" alt="">
-    <p>Agora digamos que queremos nesse projeto incluir webpack, então podemos fazer a instalação do webpack> <strong>npm install webpack</strong>. Ele irá baixar todas as dependências e no final da instalação nos dará algumas informações como a criação do arquivp <strong>package-lock.json</strong>.</p>
+    <p>Agora digamos que queremos nesse projeto incluir webpack, então podemos fazer a instalação do webpack: <strong>npm install webpack</strong>. Ele irá baixar todas as dependências e no final da instalação nos dará algumas informações como a criação do arquivo <strong>package-lock.json</strong>.</p>
+    <p>Esse package-lock.json servirá como um histórico da nossa aplicação, salvando todas as informações dos pacotes que foram instalados, versões que foram instaladas e vai fazer um lock em combinações específicas.</p>
+    <p>Os itens do webpack estarão na pasta node_modules que foi criada na instalação do webpack, contendo todos os pacotes precisa para funcionar - geralmente não é feito o upload essa pasta para um repositório, lembrando de deixar no gitignore.</p>
+    <hr>
+    <p>Após feita a instalação, verificamos que temos a inclusão da dependencia webpack:</p>
+    <img src="dependenciess.png" alt="">
+    <p>Nesse caso, o webpack está sendo apenas uma dependência de desenvolvimento, para isso é necessário mudar o caminho do webpack rodando o comando <strong>npm install webpack --save-dev</strong></p>
+    <img src="dev-dependencies.png" alt="">
+    <p>Vamos dizer agora que eu gostaria de instalar uma versão específica do webpack, utilizaremos o comando <strong>npm install webpack@*versão* --save-dev</strong></p>
+    <p>Quando alguém faz o download de um projeto é necessário fazer a instalação do webpack do projeto, rodando o comando <strong>npm install</strong>.</p>
+    <p>Para atualizar o webpack para a sua ultima versão, podemos rodar o comando <strong>npm install npm@latest</strong> assim, pegamos a última versão do npm. Podemos adicionar também após o npm@latest o <strong>-g</strong> para instalar globalmente para a máquina, se caso for necessário utilizar o webpack em vários projetos.</p>
+
+
+
+
+
+
 
 </body>
 </html>
