@@ -1,0 +1,8 @@
+{
+  "name": "curso-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/manoelmachado/curso-js.git",
+  "author": "manoelmachado <m.machado49@hotmail.com>",
+  "license": "MIT"
+}
